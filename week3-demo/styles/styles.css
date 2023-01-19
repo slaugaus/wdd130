@@ -1,0 +1,28 @@
+/* p,
+h1 {
+    color: red;
+} */
+
+/* Set font size of first h1 */
+h1:nth-child(1) {
+    font-size: 300%;
+}
+
+/* Select class */
+.redText {
+    color: red;
+}
+
+.bigText {
+    font-size: 75px;
+}
+
+/* Select ID */
+#p4 {
+    color: blue;
+}
+
+/* Override a previous selector */
+.redText {
+    color: yellow;
+}
