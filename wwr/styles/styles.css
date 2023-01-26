@@ -1,0 +1,157 @@
+/* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+/* Young Serif */
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('../fonts/YoungSerif-Regular.woff2') format('woff2'),
+        url('../fonts/YoungSerif-Regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Color vars */
+:root {
+    --primary-color: #396E94;
+    --secondary-color: #E7C24F;
+    --accent1-color: #A42212;
+    --accent2-color: #AABD8C;
+
+    --heading-font: YoungSerif, serif;
+    --paragraph-font: Open Sans, Arial, Helvetica, sans-serif;
+
+    /* these colors below should be chosen from among your palette colors above */
+    /* headlines on a white background */
+    --headline-color-on-white: var(--primary-color);
+    /* headlines on a colored background */
+    --headline-color-on-color: white;
+    /* paragraph text on a white background */
+    --paragraph-color-on-white: var(--primary-color);
+    /* paragraph text on a colored background */
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--accent2-color);
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--primary-color);
+    --background-color: bisque;
+}
+
+/****************/
+/* -- HEADER -- */
+/****************/
+header {
+    background-color: var(--accent2-color);
+}
+
+/* Nav links */
+nav a {
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.logo,
+.icon {
+    width: 80px;
+}
+
+/**************/
+/* -- BODY -- */
+/**************/
+body {
+    background-color: var(--background-color);
+}
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#hero-msg h1,
+#hero-msg h4 {
+    text-align: center;
+}
+
+#hero-img {
+    width: 100%;
+}
+
+.home-title {
+    color: var(--primary-color);
+}
+
+h2,
+h4 {
+    color: var(--paragraph-color-on-white);
+}
+
+.button-box {
+    text-align: center;
+}
+
+main section {
+    text-align: center;
+}
+
+#background {
+    background-color: var(--primary-color);
+    height: 725px;
+}
+
+/* Book Now/Join Us buttons */
+.book,
+.join {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+}
+
+.book:hover,
+.join:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.msg {
+    background-color: var(--accent2-color);
+}
+
+.msg h2 {
+    color: var(--headline-color-on-color);
+}
+
+.msg p {
+    color: var(--paragraph-color-on-color);
+}
+
+/****************/
+/* -- FOOTER -- */
+/****************/
+footer {
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+footer a {
+    color: var(--accent2-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: bisque;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
