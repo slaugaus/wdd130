@@ -1,0 +1,44 @@
+div {
+    text-align: center;
+    /* Top, Right, Bottom, Left */
+    padding: 20px 0 20px 0;
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+.top {
+    width: 400px;
+    background-color: red;
+}
+.middle {
+    width: 450px;
+    background-color: blue;
+    color: white;
+    /* Top/Bottom, Left/Right */
+    padding: 40px 0;
+}
+.bottom {
+    width: 500px;
+    background-color: green;
+    padding: 50px 0;
+}
+
+.container {
+    width: 600px;
+    height: 75px;
+    margin-top: 75px;
+    background-color: bisque;
+}
+
+.square {
+    float: left;
+    width: 75px;
+    height: 100%;
+    background-color: purple;
+    box-sizing: border-box;
+    color: white;
+}
+
+.right {
+    float: right;
+}
