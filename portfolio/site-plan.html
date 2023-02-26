@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -87,8 +86,8 @@
       <!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. --> 
       <nav>
         <a href="#">Home</a>
-        <a href="#">Page2</a>
-        <a href="#">Page3</a>
+        <a href="#">Bullet Heck</a>
+        <a href="#">Bad Apple</a>
       </nav>
       <hr>
       <h2>
@@ -99,10 +98,10 @@
           Home
         </div>
         <div class="sm-page2">
-          [Page2] <!-- change this -->
+          Bullet Heck <!-- change this -->
         </div>
         <div class="sm-page3">
-          [Page3]  <!-- change this -->
+          Bad Apple  <!-- change this -->
         </div>
 
         <div class="top">
@@ -124,29 +123,54 @@
       </h2>
       <h3>Home page</h3>
       <p>
-        [Written copy for the home page here]
+        My home page will focus on being a resume, showcasing some of my credentials (work history, education, programming language experience, etc.). After all, my intent is for this site to be linked to on my resume; visitors will be there to see if I have the experience they want for the job they're searching for. Because of this I also want to host a downloadable copy of my resume and have a "contact me" feature (probably a mailto: email link). The images are a real picture of me (copied from LinkedIn) and the profile picture I use for everything online.
       </p>
       <p>Images for the Home page</p>
-        <img src="#" alt="image for homepage">
-        <img src="#" alt="image for homepage">
+        <img src="images/profile.jpg" alt="image for homepage">
+        <img src="images/favicon.png" alt="image for homepage">
 
       </ul>
-      <h3>[Page 2]</h3>
+      <h3>Bullet Heck! showcase</h3>
       <p>
-        [Written copy for the Page 2 here]
+        Page #2 will show off my high school senior project, which was officially titled “Creating a 2D Video Game with Python.” The game itself is a 2D horizontal space shooter called “Bullet Heck” with “fake 3D” player and enemy graphics (made in Blender and rendered to .png sequences). There are 6 types of enemy that show up over time, 4 levels of weapon upgrades for your ship, and an endless score-attack gameplay loop with infinitely scaling difficulty. I also wrote a launcher program to edit game settings, but that won’t show up if I successfully web-host it. More on that later.
+      </p>
+      <p>
+        If I get really ambitious, I will use CSS animation or JavaScript to recreate the simple “starfield” background from the game. It’s just small white circles spawning randomly and accelerating right to left. Since I have the source code, I should be able to copy the effect perfectly. I could also embed the Google Slides show I had to make when presenting the senior project and/or a YouTube video of the gameplay.
+      </p>
+      <p>
+        Apparently there’s a tool called “pygbag” that compiles Pygame projects to WebAssembly, and if I get it to work, I’d like to actually host a playable Bullet Heck in an iframe on the page. So far I’ve been unsuccessful with pygbag, but it was broken with another sample project so I might just have to wait for a fix.
+      </p>
+      <p>  
+        Showing off something I did in high school might be a red flag to employers, so I might have to spin it to look good. For now it remains one of my biggest programming accomplishments, but that should change once I take a few more classes here.
+      </p>
+      <p>  
+        The images are the little “poster” that was put up at school during the project showcase, and the logo that appears ingame and in the launcher.
       </p>
       <p>Images for the Page 2</p>
-        <img src="#" alt="image for page">
-        <img src="#" alt="image for page">
-
-      </ul>
-      <h3>[Page 3]</h3>
+      <img src="https://github.com/slaugaus/seniorproject/blob/master/wiki_images/poster.png?raw=true" alt="image for page">
+      <img src="images/bulletheck.png" alt="image for page">
+      
+    </ul>
+    <h3>Bad Apple showcase</h3>
       <p>
-        [Written copy for the Page 3 here]
+        Page #3 will show off one of my recent accomplishments, a music video playing on the ECEN 260 lab kit. The main copy will be taken from my GitHub repo and maybe the lab report I wrote. Here’s the readme from that repo:
       </p>
+      <p>
+        Bad Apple!! ported to the Texas Instruments LaunchPad MSP432P401R, a black/white LCD, and a DFPlayer Mini clone. (These will be links but I’m rushing right now)
+      </p>
+      <p>
+        Video is 32x24 @ 10 fps (upscaled to 64x48), "compressed" losslessly into 2x4 (actually 4x8) characters. Since there just so happen to be 256 different 2x4 characters, one frame is only 96 bytes long. The whole program ends up using 214K of the LaunchPad's 256K. Ironically, my attempt at run-length encoding made the frame array larger (too big for the board). With more time, I would probably experiment more with compression as an attempt to get proper 64x48, but this minimum viable product is enough for the standards I wanted to meet.
+      </p>
+      <p>
+        I wanted to use the serial mode of the DFPlayer, but I could not get the MSP432 to send it valid data. Maybe I have the baud rate wrong. Ultimately it doesn't matter, since the DFPlayer also has a "next track button" pin.
+      </p>
+      <p>
+        &lt;/readme&gt; The images are the YouTube thumbnail for the showcase video (I’ll probably embed it) and a schematic/wiring diagram of the project.
+      </p>
+
       <p>Images for the Page 3</p>
-        <img src="#" alt="image for page3">
-        <img src="#" alt="image for page3">
+        <img src="http://img.youtube.com/vi/bgwLhES1YYo/hqdefault.jpg" alt="image for page3">
+        <img src="https://github.com/slaugaus/bad-msp432/raw/master/circuit.png" alt="image for page3">
 
       </ul>
       <hr>
@@ -162,13 +186,13 @@
       </p>
       <img src="#" alt="home page wireframe">
 
-      <h3>[Page 2]</h3>
+      <h3>Bullet Heck</h3>
       <p>
         [Any additional details about page 2 that the wireframe does not make clear]
       </p>
       <img src="#" alt="page 2 wireframe">
 
-      <h3>[Page 3]</h3>
+      <h3>Bad Apple</h3>
       <p>
         [Any additional details about page 3 that the wireframe does not make clear]
       </p>
