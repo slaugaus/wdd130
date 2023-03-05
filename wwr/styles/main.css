@@ -13,7 +13,7 @@
 
 /* Color vars */
 :root {
-    --primary-color: #396E94;
+    --primary-color: #396e94;
     --secondary-color: #E7C24F;
     --accent1-color: #A42212;
     --accent2-color: #AABD8C;
@@ -36,6 +36,26 @@
     --nav-hover-link-color: white;
     --nav-hover-background-color: var(--primary-color);
     --background-color: #c1c1c1;
+}
+
+/* Scrollbar shenanigans on most browsers */
+/* width */
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2d5572;
 }
 
 /* Jump-to-id links will scroll smoothly */
@@ -216,7 +236,7 @@ main p {
     color: var(--paragraph-color-on-white);
 }
 
-.content-box{
+.content-box {
     /* This makes it respect child margins for some reason */
     padding: 1px;
 }

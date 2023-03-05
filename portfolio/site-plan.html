@@ -19,7 +19,7 @@
       <hr>
       <h2>Overview</h2>
       <h3>Purpose</h3>
-      <p>A portfolio website that can demonstrate what I learned in this class and show off some of my other projects. This will include my senior project from high school, a game I made in JavaScript class, and a demo I made in ECEN 260 (Microprocessor-Based System Design).</p>  <!-- change this -->
+      <p>A portfolio/resume website that can demonstrate what I learned in this class and show off some of my other projects. This will include my senior project from high school and a demo I made in ECEN 260 (Microprocessor-Based System Design).</p>  <!-- change this -->
 
 
       <h3>Audience</h3>
@@ -132,31 +132,31 @@
       </ul>
       <h3>Bullet Heck! showcase</h3>
       <p>
-        Page #2 will show off my high school senior project, which was officially titled “Creating a 2D Video Game with Python.” The game itself is a 2D horizontal space shooter called “Bullet Heck” with “fake 3D” player and enemy graphics (made in Blender and rendered to .png sequences). There are 6 types of enemy that show up over time, 4 levels of weapon upgrades for your ship, and an endless score-attack gameplay loop with infinitely scaling difficulty. I also wrote a launcher program to edit game settings, but that won’t show up if I successfully web-host it. More on that later.
+        Page #2 will show off my high school senior project, which was officially titled “Creating a 2D Video Game with Python.” The game itself is a 2D horizontal space shooter called “Bullet Heck” with “fake 3D” player and enemy graphics (made in Blender and rendered to .png sequences). There are 6 types of enemy that show up over time, 4 levels of weapon upgrades for your ship, and an endless score-attack gameplay loop with infinitely scaling difficulty. I also wrote a launcher program to edit game settings, but that won't show up if I successfully web-host it. More on that later.
       </p>
       <p>
-        If I get really ambitious, I will use CSS animation or JavaScript to recreate the simple “starfield” background from the game. It’s just small white circles spawning randomly and accelerating right to left. Since I have the source code, I should be able to copy the effect perfectly. I could also embed the Google Slides show I had to make when presenting the senior project and/or a YouTube video of the gameplay.
+        If I get really ambitious, I will use CSS animation or JavaScript to recreate the simple “starfield” background from the game. It's just small white circles spawning randomly and accelerating right to left. Since I have the source code, I should be able to copy the effect perfectly. I could also embed the Google Slides show I had to make when presenting the senior project and/or a YouTube video of the gameplay.
       </p>
       <p>
-        Apparently there’s a tool called “pygbag” that compiles Pygame projects to WebAssembly, and if I get it to work, I’d like to actually host a playable Bullet Heck in an iframe on the page. So far I’ve been unsuccessful with pygbag, but it was broken with another sample project so I might just have to wait for a fix.
+        Apparently there's a tool called “pygbag” that compiles Pygame projects to WebAssembly, and if I get it to work, I'd like to actually host a playable Bullet Heck in an iframe on the page. So far I've been unsuccessful with pygbag, but it was broken with another sample project so I might just have to wait for a fix.
       </p>
       <p>  
         Showing off something I did in high school might be a red flag to employers, so I might have to spin it to look good. For now it remains one of my biggest programming accomplishments, but that should change once I take a few more classes here.
       </p>
-      <p>  
+      <p>
         The images are the little “poster” that was put up at school during the project showcase, and the logo that appears ingame and in the launcher.
       </p>
       <p>Images for the Page 2</p>
       <img src="https://github.com/slaugaus/seniorproject/blob/master/wiki_images/poster.png?raw=true" alt="image for page">
       <img src="images/bulletheck.png" alt="image for page">
-      
+
     </ul>
     <h3>Bad Apple showcase</h3>
       <p>
-        Page #3 will show off one of my recent accomplishments, a music video playing on the ECEN 260 lab kit. The main copy will be taken from my GitHub repo and maybe the lab report I wrote. Here’s the readme from that repo:
+        Page #3 will show off one of my recent accomplishments, a music video playing on the ECEN 260 lab kit. The main copy will be taken from my GitHub repo and maybe the lab report I wrote. Here's the readme from that repo:
       </p>
       <p>
-        Bad Apple!! ported to the Texas Instruments LaunchPad MSP432P401R, a black/white LCD, and a DFPlayer Mini clone. (These will be links but I’m rushing right now)
+        Bad Apple!! ported to the Texas Instruments LaunchPad MSP432P401R, a black/white LCD, and a DFPlayer Mini clone. (These will be links in the site)
       </p>
       <p>
         Video is 32x24 @ 10 fps (upscaled to 64x48), "compressed" losslessly into 2x4 (actually 4x8) characters. Since there just so happen to be 256 different 2x4 characters, one frame is only 96 bytes long. The whole program ends up using 214K of the LaunchPad's 256K. Ironically, my attempt at run-length encoding made the frame array larger (too big for the board). With more time, I would probably experiment more with compression as an attempt to get proper 64x48, but this minimum viable product is enough for the standards I wanted to meet.
@@ -165,7 +165,7 @@
         I wanted to use the serial mode of the DFPlayer, but I could not get the MSP432 to send it valid data. Maybe I have the baud rate wrong. Ultimately it doesn't matter, since the DFPlayer also has a "next track button" pin.
       </p>
       <p>
-        &lt;/readme&gt; The images are the YouTube thumbnail for the showcase video (I’ll probably embed it) and a schematic/wiring diagram of the project.
+        &lt;/readme&gt; The images are the YouTube thumbnail for the showcase video (I'll probably embed it) and a schematic/wiring diagram of the project.
       </p>
 
       <p>Images for the Page 3</p>
@@ -182,21 +182,21 @@
 
       <h3>Home</h3>
       <p>
-        [Any additional details about home that the wireframe does not make clear]
+        I realize that this layout isn't very responsive, I just like the look of it. On a narrower display, I'll have the box on top and the content below it.
       </p>
-      <img src="#" alt="home page wireframe">
+      <img src="images/siteplan-wf-1.png" alt="home page wireframe">
 
       <h3>Bullet Heck</h3>
       <p>
-        [Any additional details about page 2 that the wireframe does not make clear]
+        The video will be a YouTube embed. Simple copy/paste, hopefully.
       </p>
-      <img src="#" alt="page 2 wireframe">
+      <img src="images/siteplan-wf-2.png" alt="page 2 wireframe">
 
       <h3>Bad Apple</h3>
       <p>
-        [Any additional details about page 3 that the wireframe does not make clear]
+        Will not look substantially different from the Bullet Heck page.
       </p>
-      <img src="#" alt="page 3 wireframe">
+      <img src="images/siteplan-wf-3.png" alt="page 3 wireframe">
     </main>
   </body>
 

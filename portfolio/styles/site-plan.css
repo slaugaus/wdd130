@@ -5,7 +5,7 @@ Fonts are separated by a | */
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: lime;
+  --primary-color: #0F0;
   --secondary-color: #3D3D3D;
   --accent1-color: #243010;
   --accent2-color: #2A3C24;
@@ -38,6 +38,30 @@ Fonts are separated by a | */
   }
 }
 
+/* Custom scrollbar on most modern browsers (will copy to actual site CSS) */
+/* width */
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #080;
+}
+
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 body {
   max-width: 1200px;
@@ -47,7 +71,7 @@ body {
   text-align: center;
   background-color: black;
 }
-/* Makes all text white Fira Sans */
+/* Makes all text white Fira Sans by default */
 * {
   color: white;
   font-family: var(--paragraph-font);
@@ -55,6 +79,7 @@ body {
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
