@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Apple on TI MSP432 | Austin Slaughter</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Real picture of me">
+        <img src="images/favicon.png" alt="My profile picture elsewhere">
+        <h1>Austin Slaughter</h1>
+        <h3>Computer Science student</h3>
+        <nav>
+            <ul>
+                <li><h2><a href="index.html">About Me</a></h2></li>
+            </ul>
+            <h3>Major Projects:</h3>
+            <ul>
+                <li><h2><a href="bulletheck.html">Bullet Heck!</a></h2></li>
+                <li class="you-are-here"><h2>Bad Apple on MSP432</h2></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Bad Apple on MSP432</h1>
+        <iframe class="yt-embed" src="https://www.youtube-nocookie.com/embed/bgwLhES1YYo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p><a href="https://github.com/slaugaus/bad-msp432" target="_blank">View on GitHub</a></p>
+        <p><a href="https://archive.org/details/bad_apple_is.7z" target="_blank">Bad Apple!!</a> ported to the <a href="https://docs.rs-online.com/3934/A700000006811369.pdf" target="_blank">Texas Instruments LaunchPad MSP432P401R</a>, a <a href="https://www.sparkfun.com/products/10168" target="_blank">black/white LCD</a> (notable for being the same part found in the Nokia 3310 cell phone), and a <a href="https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299" target="_blank">DFPlayer Mini</a> clone.</p>
+        <p>This was my final project for ECEN 260 (Microprocessor-Based System Design) at BYU-Idaho. The lab kit had a 2-color LCD in it, and I almost immediately had the urge to play Bad Apple on it using the dev board the class was based around. This covers "Digital I/O," "Display," and "Timers" from the list of 7 concepts we needed to pick from. My professor was "quite impressed," saying it "exceeded expectations, and actually pressed the boundaries of the processor.  Good work!"</p>
+        <p>Video is 32x24 @ 10 fps (upscaled to 64x48), "compressed" losslessly into 2x4 (actually 4x8) characters. Since there just so happen to be 256 different 2x4 characters, one frame is only 96 bytes long. The whole program ends up using 214K of the LaunchPad's 256K. Ironically, my attempt at run-length encoding made the frame array larger (too big for the board). With more time, I would probably experiment more with compression as an attempt to get proper 64x48, but this minimum viable product is enough for the standards I wanted to meet.</p>
+        <p>The audio is playing from an SD card in the DFPlayer. I wanted to control it with the board's serial mode, but I could not get the MSP432 to send it valid data. Maybe I have the baud rate wrong. Ultimately it doesn't matter, since the DFPlayer also has a "next track button" pin.</p>
+        <p>All the files needed to run it are in the GitHub repo linked above. The C code can be compiled and flashed to the MSP432 with <a href="https://www.ti.com/tool/CCSTUDIO">TI Code Composer Studio.</a> Here's a wiring diagram if you happen to own the hardware and want to try it at home:</p>
+        <img src="images/ba-circuit.png" alt="Wiring diagram of the circuit">
+    </main>
+</body>
+</html>

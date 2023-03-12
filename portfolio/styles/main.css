@@ -1,0 +1,22 @@
+/* Change bullet for current page in nav to Black Right-Pointing Small Triangle (▸) */
+.you-are-here {
+    list-style-type: "\25B8  ";
+}
+
+/* Styles for said bullet */
+.you-are-here::marker {
+    font-size: larger;
+}
+
+/* List sublevel 1 - gives cleaner HTML than nested lists */
+.sub1 {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.yt-embed {
+    /* Moved from HTML attributes */
+    border: none;
+    width: 560px;
+    height: 315px;
+}
