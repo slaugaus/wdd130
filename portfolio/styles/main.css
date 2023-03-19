@@ -14,10 +14,14 @@
   --paragraph-font: "Fira Sans", Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: var(--primary-color);  /* headlines on a white background */ 
-  --headline-color-on-color: var(--primary-color); /* headlines on a colored background */ 
-  --paragraph-color-on-white: var(--primary-color); /* paragraph text on a white background */ 
-  --paragraph-color-on-color: var(--primary-color); /* paragraph text on a colored background */ 
+  /* headlines on a white background */
+  --headline-color-on-white: var(--primary-color);
+  /* headlines on a colored background */
+  --headline-color-on-color: var(--primary-color);
+  /* paragraph text on a white background */
+  --paragraph-color-on-white: var(--primary-color);
+  /* paragraph text on a colored background */
+  --paragraph-color-on-color: var(--primary-color);
   --paragraph-background-color: var(--secondary-color);
   --nav-link-color: var(--primary-color);
   --nav-background-color: var(--secondary-color);
@@ -25,14 +29,22 @@
   --nav-hover-background-color: var(--primary-color);
 }
 
-h1, h2, h2 a, h3, ::marker {
-    font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
+h1,
+h2,
+h2 a,
+h3,
+::marker {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  text-shadow: 0 0 2px var(--headline-color-on-white);
 }
 
-p, a, li {
-    font-family: var(--paragraph-font);
-    color: var(--paragraph-color-on-white);
+p,
+a,
+li {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  text-shadow: 0 0 6px var(--headline-color-on-white);
 }
 
 /* Makes things with this class blink */
@@ -47,10 +59,23 @@ p, a, li {
   }
 }
 
+/* TODO: Additional type effect https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+#bh-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 /* Custom scrollbar on most modern browsers */
 /* width */
 ::-webkit-scrollbar {
-  width: 17px;
+  width: 10px;
+  height: 10px;
 }
 
 /* Track */
@@ -73,64 +98,174 @@ p, a, li {
 
 /* Change bullet for current page in nav to Black Right-Pointing Small Triangle (▸) */
 .you-are-here {
-    list-style-type: "\25B8  ";
+  list-style-type: "\25B8  ";
 }
 
 /* Styles for said bullet */
 .you-are-here::marker {
-    font-size: larger;
+  font-size: larger;
+}
+
+main li {
+  margin-bottom: 5px;
 }
 
 /* List sublevel 1 - gives cleaner HTML than nested lists */
 .sub1 {
-    list-style-type: square;
-    margin-left: 20px;
+  list-style-type: square;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.no-space-after {
+  margin-bottom: 5px;
+}
+
+.vert-only {
+  display: none;
 }
 
 .yt-embed {
-    /* Moved from HTML attributes */
-    border: none;
-    width: 560px;
-    height: 315px;
+  border: none;
+  aspect-ratio: 16/9;
+  width: 70%;
 }
 
 body {
-    background-color: var(--background-color);
-    height: 100vh;
-    max-width: 1650px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 960px;
+  background-color: var(--background-color);
+  /* Force body to only be as tall as the window */
+  height: 100vh;
+  max-width: 1650px;
+  margin: 0 auto;
+  /* It Just Works™ */
+  display: flex;
+  gap: 10px;
 }
 
-header, #hi-box {
-    background-color: var(--secondary-color);
+header,
+#hi-box {
+  background-color: var(--secondary-color);
 }
 
 header {
-    /* Center */
-    margin: auto;
-    width: 600px;
-    height: 600px;
+  /* Center vertically */
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-header img {
-    margin: 0 auto;
+#header-imgs {
+  /* It Just Works™ */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-#hi-box {
-    text-align: center;
-    margin: 0 auto;
-    padding: 5px 20px 20px;
-    max-width: 70%;
+header h1, header h3 {
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-top: 10px;
+}
+
+header nav {
+  margin: 0 10%;
 }
 
 #side-content {
-    /* Cap height at the height of the browser window... */
-    max-height: 100vh;
-    /* ...but keep it scrollable if there's more content */
-    overflow-y: auto;
-    /* Center vertically in body */
-    margin: auto 0;
+  width: 960px;
+  /* Cap height at the height of the browser window... */
+  max-height: 100vh;
+  /* ...but keep it scrollable if there's more content */
+  overflow-y: auto;
+  /* Center vertically in body */
+  margin: auto;
 }
 
+#hi-box {
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px 20px 20px;
+  max-width: 70%;
+}
+
+#side-content h1,
+.centered {
+  text-align: center;
+}
+
+a {
+  transition: all .2s;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 6px white;
+}
+
+.block-img,
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-imgs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  margin: 30px auto;
+}
+
+/* Responsiveness */
+/* (Too narrow to display side-by-side) */
+@media screen and (max-width: 1135px) {
+  body {
+    height: fit-content;
+    display: block;
+  }
+
+  header {
+    height: fit-content;
+    width: 70%;
+  }
+
+  #header-imgs {
+    flex-wrap: wrap;
+  }
+
+  #side-content {
+    max-height: fit-content;
+    width: 95%;
+    overflow-y: none;
+    margin: 0 auto;
+  }
+
+  #hi-box {
+    width: 50%;
+  }
+
+  .sbs-only {
+    display: none;
+  }
+
+  .vert-only {
+    display: list-item;
+  }
+
+}
