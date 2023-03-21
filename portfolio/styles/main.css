@@ -59,10 +59,16 @@ li {
   }
 }
 
+/* Mono font for "shell command" decorative text */
+.command {
+  font-family: var(--heading-font);
+  font-size: 0.8em;
+}
+
 /* TODO: Additional type effect https://css-tricks.com/snippets/css/typewriter-effect/ */
 
 #bh-bg {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   z-index: -1;
@@ -166,7 +172,8 @@ header {
   justify-content: space-evenly;
 }
 
-header h1, header h3 {
+header h1,
+header h3 {
   text-align: center;
 }
 
