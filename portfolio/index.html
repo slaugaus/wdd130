@@ -7,21 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Austin Slaughter</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ascii-box.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <script defer src="scripts/main.js"></script>
+    <!-- Add Font Awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
+    <header class="ascii-box">
         <!-- Extra div needed to make flexbox not add space between the items.
              I'm probably doing something wrong (yes, I tried gap: 0) -->
         <div id="header-content">
             <div id="header-imgs">
-                <img src="images/profile.jpg" alt="Real picture of me">
-                <img src="images/favicon.png" alt="My profile picture elsewhere">
+                <!-- Need to wrap these in divs, too... -->
+                <div><img src="images/profile.jpg" alt="Real picture of me"></div>
+                <div><img src="images/favicon.png" alt="My profile picture elsewhere"></div>
             </div>
             <h1>$ Austin Slaughter <span class="blinky">█</span></h1>
             <h3 class="subtitle">Computer Science student</h3>
+            <div class="social-icons">
+                <a href="mailto:austin.r.slaughter@gmail.com?subject=Website%20Inquiry" target="_blank"><i
+                        class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/slaugaus" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/slaugaus/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://youtube.com/@slaugaus" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
             <nav>
                 <ul>
                     <li class="you-are-here">
@@ -42,7 +54,7 @@
     </header>
     <div id="side-content">
         <main>
-            <div id="hi-box">
+            <div id="hi-box" class="ascii-box">
                 <h1>Hi!</h1>
                 <p>I'm Austin, a Computer Science student at Brigham Young University-Idaho. Between my self-taught
                     computer knowledge and what I've learned in college, I have quite a bit of experience under my belt:

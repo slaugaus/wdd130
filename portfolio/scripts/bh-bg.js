@@ -1,12 +1,10 @@
 let stars = [];
 
-const canvas = document.getElementById("bh-bg");
+const canvas = document.querySelector("#bh-bg");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const context = canvas.getContext("2d");
-const centerX = canvas.width / 2;
-const centerY = canvas.height / 2;
 const starRadius = 2.5;
 
 // 1000 ms / n frames
@@ -44,12 +42,14 @@ for (let i = 0; i < 150; i++) {
 }
 
 // Update
-setInterval(() => {
+function drawBG() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   stars.forEach((star) => {
     star.move();
   });
-}, frameTime);
+}
+
+let update = setInterval(drawBG, frameTime);
 
 // Resize canvas if necessary
 window.onresize = () => {
@@ -61,3 +61,21 @@ window.onresize = () => {
 function onUpdate() {}
 
 // window.requestAnimationFrame(onUpdate);
+
+// Pause functionality
+let isPaused = false;
+
+document.querySelector("#toggle-bg").onclick = () => {
+  if (isPaused) {
+    // Unpause
+    update = setInterval(drawBG, frameTime);
+    isPaused = false;
+    document.querySelector("#toggle-bg").textContent = "Click here to turn it off.";
+  } else {
+    // Pause/clear
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    clearInterval(update);
+    isPaused = true;
+    document.querySelector("#toggle-bg").textContent = "Click here to turn it on.";
+  }
+};

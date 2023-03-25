@@ -166,10 +166,16 @@ header {
 }
 
 #header-imgs {
-  /* It Just Works™ */
+  /* It Just Works™... with enough fiddling */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: nowrap;
+  max-height: 200px;
+}
+
+#header-imgs img {
+  width: 100%;
 }
 
 header h1,
@@ -182,12 +188,25 @@ header h1 {
 }
 
 .subtitle {
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
 header nav {
   margin: 0 10%;
 }
+
+.social-icons {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.social-icons a {
+  text-shadow: 0 0 2px var(--headline-color-on-white);
+  text-decoration: none;
+}
+
+/* PAGE CONTENT */
 
 #side-content {
   width: 960px;
@@ -201,9 +220,9 @@ header nav {
 
 #hi-box {
   text-align: center;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 5px 20px 20px;
-  max-width: 70%;
+  width: 70%;
 }
 
 #side-content h1,
@@ -213,11 +232,17 @@ header nav {
 
 a {
   transition: all .2s;
+  font-family: inherit;
 }
 
 a:hover {
   color: white;
   text-shadow: 0 0 6px white;
+}
+
+/* Mainly for Bad Apple wiring diagram. Prevents imgs from overflowing */
+img {
+  max-width: 100%;
 }
 
 .block-img,
@@ -239,6 +264,12 @@ footer {
   margin: 30px auto;
 }
 
+/* This is an <a>, why do I have to set these manually? */
+#toggle-bg {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* Responsiveness */
 /* (Too narrow to display side-by-side) */
 @media screen and (max-width: 1135px) {
@@ -250,10 +281,7 @@ footer {
   header {
     height: fit-content;
     width: 70%;
-  }
-
-  #header-imgs {
-    flex-wrap: wrap;
+    margin-top: 10px;
   }
 
   #side-content {
@@ -274,5 +302,19 @@ footer {
   .vert-only {
     display: list-item;
   }
+}
 
+/* Extra narrow (phone) */
+@media screen and (max-width: 720px) {
+  .yt-embed {
+    width: 100%;
+  }
+
+  header {
+    width: 95%;
+  }
+
+  #hi-box {
+    width: 90%;
+  }
 }
